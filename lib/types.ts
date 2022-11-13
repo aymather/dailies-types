@@ -70,6 +70,9 @@ export interface UserResponse extends UserModel {
 export type AddDailyRequestParameters = { name: string, icon: Icons }
 export type AddDailyResponse = DailyModel
 
+export type DeleteDailyRequestParameters = { daily_id: number }
+export type DeleteDailyResponse = { daily_id: number }
+
 export type ErrorResponse = {
     msg: string;
     error: string | null;
