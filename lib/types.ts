@@ -73,6 +73,9 @@ export type AddDailyResponse = DailyModel
 export type DeleteDailyRequestParameters = { daily_id: number }
 export type DeleteDailyResponse = { daily_id: number }
 
+export type EditDailyRequestParameters = { daily_id: number, name: string, icon: Icons }
+export type EditDailyResponse = { daily_id: number }
+
 export type ErrorResponse = {
     msg: string;
     error: string | null;
