@@ -1,4 +1,11 @@
 /**
+ * Suffix:
+ *  - ...Model | Database representation
+ *  - ...RequestParameters | Parameters of a request object to the api
+ *  - ...Response | Body of a response from the api
+ */
+
+/**
  * Database models
  * 
  * We may not even use these, but we're going to keep them kinda the way we would
@@ -52,23 +59,8 @@ export interface CompletedModel {
  * End database models
  */
 
-export enum Icons {
-    apple = 'apple',
-    connect = 'connect',
-    sleep = 'sleep',
-    sun = 'sun',
-    water = 'water',
-    wave = 'wave'
-}
-
 /**
  * Api Responses
- * 
- * These will be the models passed back from the backend api, and their corresponding
- * request parameters (if any).
- * 
- * Response suffix: ...Response
- * Param suffix: ...RequestParameters
  */
 export interface UserResponse extends UserModel {
     dailies: Array<DailyModel>;
@@ -77,3 +69,21 @@ export interface UserResponse extends UserModel {
 
 export type AddDailyRequestParameters = { name: string, icon: Icons }
 export type AddDailyResponse = AddDailyRequestParameters & { daily_id: number }
+/**
+ * End api responses
+ */
+
+/**
+ * Etc
+ */
+export enum Icons {
+    apple = 'apple',
+    connect = 'connect',
+    sleep = 'sleep',
+    sun = 'sun',
+    water = 'water',
+    wave = 'wave'
+}
+/**
+ * End etc
+ */
