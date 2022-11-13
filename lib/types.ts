@@ -69,6 +69,11 @@ export interface UserResponse extends UserModel {
 
 export type AddDailyRequestParameters = { name: string, icon: Icons }
 export type AddDailyResponse = DailyModel
+
+export type ErrorResponse = {
+    msg: string;
+    error: string | null;
+}
 /**
  * End api responses
  */
